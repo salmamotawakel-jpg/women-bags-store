@@ -2,7 +2,7 @@
 "use server"
 
 import { createClient } from "next-sanity";
-import { GroupedCartItems } from ".././store";
+import { GroupedCartItems } from "../store";
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 
