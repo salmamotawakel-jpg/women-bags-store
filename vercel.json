@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
+  "env": {
+    "NPM_LEGACY_PEER_DEPS": "true"
+  }
+}
