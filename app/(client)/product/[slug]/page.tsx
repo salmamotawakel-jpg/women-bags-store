@@ -1,12 +1,12 @@
 
 
-import AddToCartButton from "@/components/AddToCartButton";
-import Container from "@/components/Container";
-import FavoriteButton from "@/components/FavoriteButton";
-import PriceFormatter from "@/components/PriceFormatter";
-import ProductCharacteristics from "@/components/ProductCharacteristics";
-import ProductImageGallery from "@/components/ProductIMageGallery";
-import { getProductBySlug } from "@/sanity/queries";
+import AddToCartButton from "../../../../components/AddToCartButton";
+import Container from "../../../../components/Container";
+import FavoriteButton from "../../../../components/FavoriteButton";
+import PriceFormatter from "../../../../components/PriceFormatter";
+import ProductCharacteristics from "../../../../components/ProductCharacteristics";
+import ProductImageGallery from "../../../../components/ProductIMageGallery";
+import { getProductBySlug } from "../../../../sanity/queries";
 import { CornerDownLeft, Truck, Star, RotateCcw, CheckCircle, Package, CreditCard } from "lucide-react";
 import { notFound } from "next/navigation";
 import React from "react";

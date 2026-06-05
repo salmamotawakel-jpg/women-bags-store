@@ -3,10 +3,10 @@
 "use client"
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../sanity/lib/image";
 import Link from "next/link";
 import Title from "./Title";
-import { Category } from "@/sanity.types";
+import { Category } from "../sanity.types";
 
 const HomeCategories = ({ categories }: { categories: Category[] }) => {
   const sectionRef = useRef<HTMLDivElement>(null);

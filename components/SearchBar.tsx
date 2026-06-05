@@ -5,11 +5,11 @@ import { X, Loader2, ShoppingBag } from "lucide-react";
 import { BsSearch } from "react-icons/bs";
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../sanity/lib/image";
 import Link from "next/link";
-import PriceFormatter from "@/components/PriceFormatter";
-import { searchProducts, SearchResult } from "@/sanity/searchService";
-import { useDebounce } from "@/hooks/useDebounce";
+import PriceFormatter from "../components/PriceFormatter";
+import { searchProducts, SearchResult } from "../sanity/searchService";
+import { useDebounce } from "../hooks/useDebounce";
 
 export default function SearchBar() {
   const [open, setOpen] = useState(false);

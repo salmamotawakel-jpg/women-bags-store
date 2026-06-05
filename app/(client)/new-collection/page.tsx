@@ -1,9 +1,9 @@
 
 
 // app/(client)/new-collection/page.tsx
-import Container from "@/components/Container";
-import NewCollection from "@/components/NewCollection";
-import { getNewCollectionProducts } from "@/sanity/queries/newCollection";
+import Container from "../../../components/Container";
+import NewCollection from "../../../components/NewCollection";
+import { getNewCollectionProducts } from "../../../sanity/queries/newCollection";
 
 export const metadata = {
   title: "New Collection | Women Bag",

@@ -1,15 +1,15 @@
 
 
 
-import Container from "@/components/Container";
-import HomeBanner from "@/components/HomeBanner";
-import HomeCategories from "@/components/HomeCategories";
-import ProductGrid from "@/components/ProductGrid";
-import AboutRestaurant from "@/components/AboutRestaurant"
-import NewCollection from "@/components/NewCollection";
-import { getNewCollectionProducts } from "@/sanity/queries/newCollection";
-import FooterSection from "@/components/FooterSection";
-import { getCategories } from "@/sanity/queries";
+import Container from "../../components/Container";
+import HomeBanner from "../../components/HomeBanner";
+import HomeCategories from "../../components/HomeCategories";
+import ProductGrid from "../../components/ProductGrid";
+import AboutRestaurant from "../../components/AboutRestaurant"
+import NewCollection from "../../components/NewCollection";
+import { getNewCollectionProducts } from "../../sanity/queries/newCollection";
+import FooterSection from "../../components/FooterSection";
+import { getCategories } from "../../sanity/queries";
 import React from "react";
 
 

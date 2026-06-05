@@ -10,7 +10,7 @@ import {
   TableRow,
 } from "./ui/table";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../sanity/lib/image";
 import PriceFormatter from "./PriceFormatter";
 
 // تعريف نوع الطلب العام (متوافق مع OrdersComponent)

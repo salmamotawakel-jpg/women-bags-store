@@ -3,8 +3,8 @@ import {
   internalGroqTypeReferenceTo,
   SanityImageCrop,
   SanityImageHotspot,
-} from "@/sanity.types";
-import { urlFor } from "@/sanity/lib/image";
+} from "../sanity.types";
+import { urlFor } from "../sanity/lib/image";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";

@@ -1,6 +1,6 @@
 "use client";
 
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../sanity/lib/image";
 import { Play, Pause, ChevronLeft, ChevronRight, X, Video } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useEffect, useCallback } from "react";

@@ -4,10 +4,10 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "motion/react";
-import { client } from "@/sanity/lib/client";
+import { client } from "../sanity/lib/client";
 import { Loader2 } from "lucide-react";
 import Container from "./Container";
-import { Product } from "@/sanity.types";
+import { Product } from "../sanity.types";
 import ProductCard from "./ProductCard";
 
 const ProductGrid = () => {

@@ -3,23 +3,23 @@
 
 "use client";
 
-import { createCashOrder } from "@/actions/createCheckoutSession";
-import Container from "@/components/Container";
-import EmptyCart from "@/components/EmptyCart";
-import PriceFormatter from "@/components/PriceFormatter";
-import ProductSideMenu from "@/components/ProductSideMenu";
-import QuantityButtons from "@/components/QuantityButtons";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import useStore from "@/store";
+import { createCashOrder } from "../../../actions/createCheckoutSession";
+import Container from "../../../components/Container";
+import EmptyCart from "../../../components/EmptyCart";
+import PriceFormatter from "../../../components/PriceFormatter";
+import ProductSideMenu from "../../../components/ProductSideMenu";
+import QuantityButtons from "../../../components/QuantityButtons";
+import { Button } from "../../../components/ui/button";
+import { Input } from "../../../components/ui/input";
+import { Label } from "../../../components/ui/label";
+import { Textarea } from "../../../components/ui/textarea";
+import useStore from "../../../store";
 import { ShoppingBag, Trash, Phone, MapPin, Heart, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../../../sanity/lib/image";
 import Cookies from "js-cookie";
 
 const CartPage = () => {

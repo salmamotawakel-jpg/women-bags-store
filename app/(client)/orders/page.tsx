@@ -1,17 +1,17 @@
 // app/(client)/orders/page.tsx
 "use client";
 
-import Container from "@/components/Container";
-import OrdersComponent from "@/components/OrdersComponent";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { Table, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import Container from "../../../components/Container";
+import OrdersComponent from "../../../components/OrdersComponent";
+import { Button } from "../../../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card";
+import { ScrollArea, ScrollBar } from "../../../components/ui/scroll-area";
+import { Table, TableHead, TableHeader, TableRow } from "../../../components/ui/table";
 import { FileX } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import FooterSection from "@/components/FooterSection";
-import { client } from "@/sanity/lib/client";
+import FooterSection from "../../../components/FooterSection";
+import { client } from "../../../sanity/lib/client";
 
 interface Order {
   _id: string;

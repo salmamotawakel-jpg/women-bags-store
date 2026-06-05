@@ -2,7 +2,7 @@ import { Facebook, Instagram,  Youtube,  } from 'lucide-react';
 import { FaTiktok, FaWhatsapp } from 'react-icons/fa'
 import React from 'react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 import Link from 'next/link';
 
 

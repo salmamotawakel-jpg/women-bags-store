@@ -1,8 +1,8 @@
 
 
-import WishListProducts from "@/components/WishListProducts";
+import WishListProducts from "../../../components/WishListProducts";
 
-import FooterSection from "@/components/FooterSection";
+import FooterSection from "../../../components/FooterSection";
 import React from "react";
 
 const WishListPage = async () => {

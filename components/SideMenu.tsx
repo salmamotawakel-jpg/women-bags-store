@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 import React, { FC, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useOutsideClick } from '@/hooks';
+import { useOutsideClick } from '../hooks';
 import SocialMedia from './SocialMedia';
 
 interface SidebarProps {

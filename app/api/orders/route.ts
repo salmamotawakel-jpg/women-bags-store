@@ -1,6 +1,6 @@
 // app/api/orders/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { sanityClient } from "@/sanity/lib/client";
+import { sanityClient } from "../../../sanity/lib/client";
 import { revalidatePath } from "next/cache";
 
 export async function DELETE(request: NextRequest) {

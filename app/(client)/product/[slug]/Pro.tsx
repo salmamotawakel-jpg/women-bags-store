@@ -1,8 +1,8 @@
 "use client";
 
-import AddToCartButton from "@/components/AddToCartButton";
-import FavoriteButton from "@/components/FavoriteButton";
-import ReviewForm from "@/components/ReviewForm";
+import AddToCartButton from "../../../../components/AddToCartButton";
+import FavoriteButton from "../../../../components/FavoriteButton";
+import ReviewForm from "../../../../components/ReviewForm";
 import { Share2, Star, StarHalf, ThumbsUp } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useEffect, useCallback } from "react";

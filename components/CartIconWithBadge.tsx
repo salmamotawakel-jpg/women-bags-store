@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { BsHandbag } from "react-icons/bs";
-import useStore from "@/store";
+import useStore from "../store";
 import { useEffect, useState } from "react";
 
 const CartIconWithBadge = () => {

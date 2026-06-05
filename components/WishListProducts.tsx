@@ -4,18 +4,18 @@
 
 "use client";
 
-import useStore from "@/store";
+import useStore from "../store";
 import { useState, useEffect, useRef } from "react";
 import Container from "./Container";
 import { Heart, X, ShoppingBag, Trash2, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
-import { Product } from "@/sanity.types";
+import { Product } from "../sanity.types";
 import toast from "react-hot-toast";
 import Image from "next/image";
-import { urlFor } from "@/sanity/lib/image";
+import { urlFor } from "../sanity/lib/image";
 import PriceFormatter from "./PriceFormatter";
 import AddToCartButton from "./AddToCartButton";
-import { client } from "@/sanity/lib/client";
+import { client } from "../sanity/lib/client";
 
 const extractCategoryText = (category: any): string => {
   if (typeof category === 'string') return category;

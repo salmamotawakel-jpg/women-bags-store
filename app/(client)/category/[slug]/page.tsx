@@ -2,8 +2,8 @@
 
 "use client";
 
-import { client } from "@/sanity/lib/client";
-import ProductCard from "@/components/ProductCard";
+import { client } from "../../../../sanity/lib/client";
+import ProductCard from "../../../../components/ProductCard";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, SlidersHorizontal } from "lucide-react";

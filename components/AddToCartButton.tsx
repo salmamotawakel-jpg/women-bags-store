@@ -1,5 +1,5 @@
 "use client";
-import { Product } from "@/sanity.types";
+import { Product } from "../sanity.types";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { ShoppingBag } from "lucide-react";
