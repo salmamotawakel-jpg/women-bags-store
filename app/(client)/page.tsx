@@ -1,35 +1,33 @@
 
-
-
 import Container from "../../components/Container";
-import HomeBanner from "../../components/HomeBanner";
+import dynamic from "next/dynamic";
+
 import HomeCategories from "../../components/HomeCategories";
 import ProductGrid from "../../components/ProductGrid";
-import AboutRestaurant from "../../components/AboutRestaurant"
+import AboutRestaurant from "../../components/AboutRestaurant";
 import NewCollection from "../../components/NewCollection";
-import { getNewCollectionProducts } from "../../sanity/queries/newCollection";
 import FooterSection from "../../components/FooterSection";
+
+import { getNewCollectionProducts } from "../../sanity/queries/newCollection";
 import { getCategories } from "../../sanity/queries";
-import React from "react";
 
-
+// 🔥 مهم: منع SSR للـ 3D
+const HomeBanner = dynamic(() => import("../../components/HomeBanner"), {
+  ssr: false,
+});
 
 const Home = async () => {
   const categories = await getCategories();
- const newProducts = await getNewCollectionProducts();
-
-
+  const newProducts = await getNewCollectionProducts();
 
   return (
     <Container className="bg-shop-light-pink">
-
-         <HomeBanner />
-         <HomeCategories categories={categories} />
-         <ProductGrid />
-         <AboutRestaurant/>
-         <NewCollection products={newProducts} />
- <FooterSection />
-
+      <HomeBanner />
+      <HomeCategories categories={categories} />
+      <ProductGrid />
+      <AboutRestaurant />
+      <NewCollection products={newProducts} />
+      <FooterSection />
     </Container>
   );
 };
