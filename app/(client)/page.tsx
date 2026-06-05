@@ -1,8 +1,4 @@
-export const dynamic = "force-dynamic";
-
 import Container from "../../components/Container";
-import dynamicImport from "next/dynamic";
-
 import HomeCategories from "../../components/HomeCategories";
 import ProductGrid from "../../components/ProductGrid";
 import AboutRestaurant from "../../components/AboutRestaurant";
@@ -12,7 +8,9 @@ import FooterSection from "../../components/FooterSection";
 import { getNewCollectionProducts } from "../../sanity/queries/newCollection";
 import { getCategories } from "../../sanity/queries";
 
-// 🔥 أهم خطوة: منع SSR للـ 3D
+import dynamicImport from "next/dynamic"; // ✅ غير الاسم لتجنب التعارض
+
+// 🔥 مهم: منع SSR للـ 3D
 const HomeBanner = dynamicImport(
   () => import("../../components/HomeBanner"),
   { ssr: false }
