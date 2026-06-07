@@ -146,8 +146,9 @@
     @apply bg-background text-foreground;
   }
   .hoverEffect {
-    @apply transition-all duration-300 ease-in-out;
-  }
+  @apply transition-all duration-300;
+  transition-timing-function: ease-in-out;
+}
   button {
     @apply hover:cursor-pointer;
   }
