@@ -2,166 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@custom-variant dark (&:is(.dark *));
-
-@theme {
-  --font-poppins: "Poppins", sans-serif;
-  --color-shop_dark_blue: #22223b;
-  --color-shop_light_blue: #4a4e69;
-  --color-shop_light_perpel: #9f86c0;
-  --color-shop_light_vanilla: #f2e3e0;
-  --color-shop_btn_dark_green: #063d29;
-  --color-shop_light_orange: #c9ada7;
-  --color-shop_light_pink: #9a8c98;
-  --color-shop_white: #f2e9e4;
-  --color-darkColor: #151515;
-  --color-lightColor: #52525b;
-  --color-lightOrange: #fca99b;
-  --color-shop_light_green: #3b9c3c;
-  --color-deal-bg: #f1f3f8;
-  --color-dark_blue: #6c7fd8;
-
-}
-
-:root {
-  --font-poppins: "Poppins", "sans-serif";
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --radius-2xl: calc(var(--radius) + 8px);
-  --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
-}
-
 @layer base {
-  * {
-    @apply border border-ring;
+  :root {
+    --font-poppins: "Poppins", sans-serif;
+    
+    /* الألوان الأساسية */
+    --color-shop-dark-blue: #22223b;
+    --color-shop-light-blue: #4a4e69;
+    --color-shop-light-perpel: #9f86c0;
+    --color-shop-light-vanilla: #f2e3e0;
+    --color-shop-btn-dark-green: #063d29;
+    --color-shop-light-orange: #c9ada7;
+    --color-shop-light-pink: #9a8c98;
+    --color-shop-white: #f2e9e4;
+    --color-darkColor: #151515;
+    --color-lightColor: #52525b;
+    --color-lightOrange: #fca99b;
+    --color-shop-light-green: #3b9c3c;
+    --color-deal-bg: #f1f3f8;
+    --color-dark-blue: #6c7fd8;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+}
+
+@layer utilities {
+  /* ألوان الخلفية */
+  .bg-shop-dark-blue { background-color: #22223b; }
+  .bg-shop-light-blue { background-color: #4a4e69; }
+  .bg-shop-light-perpel { background-color: #9f86c0; }
+  .bg-shop-light-vanilla { background-color: #f2e3e0; }
+  .bg-shop-btn-dark-green { background-color: #063d29; }
+  .bg-shop-light-orange { background-color: #c9ada7; }
+  .bg-shop-light-pink { background-color: #9a8c98; }
+  .bg-shop-white { background-color: #f2e9e4; }
+  .bg-darkColor { background-color: #151515; }
+  .bg-lightColor { background-color: #52525b; }
+  .bg-lightOrange { background-color: #fca99b; }
+  .bg-shop-light-green { background-color: #3b9c3c; }
+  .bg-deal-bg { background-color: #f1f3f8; }
+  .bg-dark-blue { background-color: #6c7fd8; }
+  
+  /* ألوان النص */
+  .text-shop-dark-blue { color: #22223b; }
+  .text-shop-light-blue { color: #4a4e69; }
+  .text-shop-light-perpel { color: #9f86c0; }
+  .text-shop-light-vanilla { color: #f2e3e0; }
+  .text-shop-btn-dark-green { color: #063d29; }
+  .text-shop-light-orange { color: #c9ada7; }
+  .text-shop-light-pink { color: #9a8c98; }
+  .text-shop-white { color: #f2e9e4; }
+  
+  /* تأثيرات */
   .hoverEffect {
-  @apply transition-all duration-300;
-  transition-timing-function: ease-in-out;
-}
-  button {
-    @apply hover:cursor-pointer;
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 
-body {
-  font-family: var(--font-poppins);
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
+/* أنيمشنات */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
@@ -174,9 +74,6 @@ body {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
-
-
-
 
 @keyframes spinSlow {
   from {
@@ -191,6 +88,13 @@ body {
   animation: spinSlow 6s linear infinite;
 }
 
+body {
+  font-family: var(--font-poppins);
+}
+
+button {
+  @apply hover:cursor-pointer;
+}
 
 
 
@@ -203,3 +107,100 @@ body {
 
 
 
+
+
+
+
+/* مسافة جانبية بسيطة ومناسبة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* إضافة مسافة جانبية بسيطة لمكونات الصفحة */
+.container, [class*="Container"] {
+  padding-left: 1rem !important;   /* 1rem = 16px مسافة صغيرة */
+  padding-right: 1rem !important;  /* 1rem = 16px مسافة صغيرة */
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* للشاشات الصغيرة (موبايل) */
+@media (min-width: 640px) {
+  .container, [class*="Container"] {
+    padding-left: 1.5rem !important;   /* 24px */
+    padding-right: 1.5rem !important;
+  }
+}
+
+/* للشاشات المتوسطة (تابلت) */
+@media (min-width: 768px) {
+  .container, [class*="Container"] {
+    padding-left: 2rem !important;     /* 32px */
+    padding-right: 2rem !important;
+  }
+}
+
+/* للشاشات الكبيرة (ديسكتوب) */
+@media (min-width: 1024px) {
+  .container, [class*="Container"] {
+    padding-left: 2.5rem !important;   /* 40px */
+    padding-right: 2.5rem !important;
+  }
+}
+
+
+
+
+
+
+
+/* تغيير خلفية الأقسام إلى أبيض */
+section, 
+[class*="Categories"], 
+[class*="ProductGrid"],
+[class*="Featured"] {
+  background-color: white !important;
+}
+
+/* أو إذا كانت تستخدم bg-shop-light-pink */
+.bg-shop-light-pink {
+  background-color: white !important;
+}
+
+/* لأي عنصر له خلفية وردية/بنفسجية */
+[class*="bg-shop-light"],
+[class*="bg-dark"] {
+  background-color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* دوران 360 درجة */
+@keyframes spin360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,5 +1,6 @@
 
 import type { Metadata } from "next";
+// @ts-ignore
 import "../globals.css";
 
 import Header from "../../components/Header";
@@ -7,8 +8,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s - Sanida-H",
-    default: "Sanida-H",
+    template: "%s - Women-B",
+    default: "Women-B",
   },
   description: "متجر تفوكت الإلكتروني – كل ما تحتاجه في مكان واحد",
 };
