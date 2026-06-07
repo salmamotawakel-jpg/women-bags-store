@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // components/AboutRestaurant.tsx
 "use client";
 
@@ -58,3 +64,4 @@ const AboutRestaurant = () => {
 };
 
 export default AboutRestaurant;
+
