@@ -2,28 +2,39 @@
 
 
 
-
-
 // components/AboutRestaurant.tsx
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
+import { getRestaurantVideo } from "@/sanity/queries/restaurant";
 
 const AboutRestaurant = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [videoUrl, setVideoUrl] = useState<string>("");
+
+  useEffect(() => {
+    // جلب الفيديو من Sanity
+    const fetchVideo = async () => {
+      const url = await getRestaurantVideo();
+      if (url) {
+        setVideoUrl(url);
+      }
+    };
+    fetchVideo();
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // يتوقف عن المراقبة بعد الظهور مرة واحدة
+          observer.disconnect();
         }
       },
       {
-        threshold: 0.3, // يظهر عندما يكون 30% من القسم مرئيًا
+        threshold: 0.3,
       }
     );
 
@@ -38,6 +49,18 @@ const AboutRestaurant = () => {
     };
   }, []);
 
+  // إذا لم يتم تحميل الفيديو بعد، لا نعرض شيء
+  if (!videoUrl) {
+    return (
+      <section
+        ref={sectionRef}
+        className="w-full flex justify-center items-center p-4 bg-white min-h-screen"
+      >
+        <div className="w-full max-w-sm rounded-3xl bg-gray-100 animate-pulse h-96"></div>
+      </section>
+    );
+  }
+
   return (
     <section
       ref={sectionRef}
@@ -45,7 +68,7 @@ const AboutRestaurant = () => {
     >
       <video
         ref={videoRef}
-        src="/videos/Kolo.mp4"
+        src={videoUrl}
         autoPlay
         loop
         muted
@@ -64,4 +87,3 @@ const AboutRestaurant = () => {
 };
 
 export default AboutRestaurant;
-
