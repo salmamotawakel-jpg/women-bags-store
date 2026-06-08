@@ -54,7 +54,7 @@ const ProductSideMenu = ({
       >
         <Heart 
           size={15} 
-          className={existingProduct ? "fill-red-400 text-white" : "fill-none"}
+          className={existingProduct ? "fill-red-800 text-white" : "fill-none"}
         />
       </div>
     </div>
