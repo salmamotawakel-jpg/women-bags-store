@@ -1,5 +1,8 @@
 
 
+
+
+
 import WishListProducts from "../../../components/WishListProducts";
 
 import FooterSection from "../../../components/FooterSection";
@@ -10,9 +13,10 @@ const WishListPage = async () => {
     <>
       
         <WishListProducts />
- <FooterSection />
+         <FooterSection />
     </>
   );
 };
 
 export default WishListPage;
+
