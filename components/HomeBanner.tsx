@@ -56,7 +56,7 @@ export default function HomeBanner() {
   
   if (!mounted) {
     return (
-      <div className="w-full h-[500px] bg-black flex items-center justify-center">
+      <div className="w-full h-[500px]  bg-black flex items-center justify-center">
         <div
           className="w-40 h-1.5 rounded-full"
           style={{

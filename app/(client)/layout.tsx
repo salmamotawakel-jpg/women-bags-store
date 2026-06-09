@@ -1,17 +1,15 @@
-
+// app/layout.tsx
 import type { Metadata } from "next";
-// @ts-ignore
 import "../globals.css";
-
-import Header from "../../components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
+import Header from "../../components/Header";
 
 export const metadata: Metadata = {
   title: {
     template: "%s - Women-B",
     default: "Women-B",
   },
-  description: "متجر تفوكت الإلكتروني – كل ما تحتاجه في مكان واحد",
+  description: "متجر women-b الإلكتروني – كل ما تحتاجه في مكان واحد",
 };
 
 export default function RootLayout({
@@ -21,13 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <div className="flex flex-col min-h-screen">
+      <html lang="en">
+        <body className="pt-20">
           <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-        </div>
-      
+          <main>{children}</main>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
