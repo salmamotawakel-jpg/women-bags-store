@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 "use client";
 
 import { urlFor } from "../sanity/lib/image";
@@ -124,7 +134,7 @@ const ProductImageGallery = ({ images, video, isStock = 0 }: ProductImageGallery
         {hasVideo && (
           <button
             onClick={() => setShowVideo(true)}
-            className="absolute top-3 left-28 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all group z-10"
+            className="absolute bottom-3 left-20 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all group z-10"
             aria-label="Watch video"
           >
             <Video size={18} className="text-white group-hover:scale-110 transition" />
