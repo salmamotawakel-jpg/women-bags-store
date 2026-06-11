@@ -115,7 +115,7 @@ export default function SearchBar() {
       {/* Modal - Peach & Dark Green theme */}
       {open && (
         <div 
-          className="fixed inset-0 z-50 bg-emerald-900/20 backdrop-blur-sm flex items-start justify-center pt-20 md:pt-32 px-4"
+          className="fixed inset-0 z-100 bg-emerald-900/20 backdrop-blur-sm flex items-start justify-center pt-20 md:pt-32 px-4"
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
           }}

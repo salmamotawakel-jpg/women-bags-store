@@ -1,9 +1,10 @@
+// components/ProductClient.tsx
 "use client";
 
 import AddToCartButton from "../../../../components/AddToCartButton";
 import FavoriteButton from "../../../../components/FavoriteButton";
 import ReviewForm from "../../../../components/ReviewForm";
-import { Share2, Star, StarHalf, ThumbsUp } from "lucide-react";
+import { Share2, Star } from "lucide-react";
 import Image from "next/image";
 import React, { useState, useEffect, useCallback } from "react";
 import toast from "react-hot-toast";
@@ -97,7 +98,8 @@ const ProductClient = ({ product }: { product: any }) => {
         </button>
       </div>
 
-      <div>
+      {/* ✅ إضافة حاوية التقييمات مع opacity عند فتح الفورم */}
+      <div className={`transition-all duration-300 ${showReviewForm ? 'opacity-50 pointer-events-none' : 'opacity-100'}`}>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-sm font-medium text-gray-900">آراء العملاء</h3>
         </div>
@@ -137,7 +139,6 @@ const ProductClient = ({ product }: { product: any }) => {
             reviews.map((review: Review) => (
               <div key={review._id} className="border border-gray-100 rounded-lg p-3">
                 <div className="flex items-start gap-3">
-                  {/* صورة المستخدم الشخصية */}
                   {review.userImage ? (
                     <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0">
                       <Image
@@ -169,7 +170,6 @@ const ProductClient = ({ product }: { product: any }) => {
                     <p className="text-xs font-medium text-gray-700 mt-1">{review.title}</p>
                     <p className="text-xs text-gray-500 mt-0.5">{review.comment}</p>
                     
-                    {/* صور المراجعة */}
                     {review.images && review.images.length > 0 && (
                       <div className="flex gap-2 mt-2 flex-wrap">
                         {review.images.map((img, idx) => (

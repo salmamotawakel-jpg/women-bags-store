@@ -1,8 +1,9 @@
+// components/ReviewForm.tsx
 "use client";
 
 import { Star, Upload, X, Camera } from "lucide-react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 interface ReviewFormProps {
@@ -23,7 +24,14 @@ const ReviewForm = ({ productId, onClose, onReviewSubmitted }: ReviewFormProps) 
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // رفع صورة المستخدم الشخصية
+  // منع تمرير الخلفية
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   const handleUserImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -46,7 +54,6 @@ const ReviewForm = ({ productId, onClose, onReviewSubmitted }: ReviewFormProps) 
     setUserImagePreview(null);
   };
 
-  // رفع صور المراجعة
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
     if (images.length + files.length > 3) {
@@ -135,16 +142,24 @@ const ReviewForm = ({ productId, onClose, onReviewSubmitted }: ReviewFormProps) 
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
-        <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex items-center justify-between">
+    // خلفية سوداء شفافة - تمنع الوصول للمحتوى الخلفي
+    <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+      {/* محتوى الفورم */}
+      <div className="bg-white rounded-2xl w-full max-w-lg max-h-[90vh] flex flex-col">
+        
+        {/* Header ثابت */}
+        <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex items-center justify-between rounded-t-2xl">
           <h3 className="text-lg font-medium text-gray-900">أضف مراجعتك</h3>
-          <button onClick={onClose} className="p-1 hover:bg-gray-100 rounded-lg transition">
+          <button 
+            onClick={onClose} 
+            className="p-1 hover:bg-gray-100 rounded-lg transition"
+          >
             <X size={20} />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-5 space-y-5">
+        {/* محتوى قابل للتمرير - كل شيء داخل الفورم فقط */}
+        <div className="overflow-y-auto p-5 space-y-5">
           {/* صورة المستخدم الشخصية */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -180,7 +195,6 @@ const ReviewForm = ({ productId, onClose, onReviewSubmitted }: ReviewFormProps) 
                     accept="image/*"
                     onChange={handleUserImageUpload}
                     className="hidden"
-                    capture="user"
                   />
                 </label>
               )}
@@ -292,7 +306,6 @@ const ReviewForm = ({ productId, onClose, onReviewSubmitted }: ReviewFormProps) 
                     multiple
                     onChange={handleImageUpload}
                     className="hidden"
-                    capture="environment"
                   />
                 </label>
               )}
@@ -304,12 +317,13 @@ const ReviewForm = ({ productId, onClose, onReviewSubmitted }: ReviewFormProps) 
 
           <button
             type="submit"
+            onClick={handleSubmit}
             disabled={loading}
-            className="w-full py-3 bg-pink-800 hover:bg-pink-900 text-white rounded-lg font-medium transition disabled:opacity-50"
+            className="w-full py-3 bg-pink-800 hover:bg-pink-900 text-white rounded-lg font-medium transition disabled:opacity-50 mb-2"
           >
             {loading ? "جاري النشر..." : "نشر المراجعة"}
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );

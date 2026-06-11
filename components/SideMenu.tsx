@@ -47,7 +47,7 @@ const SideMenu: FC<SidebarProps> = ({ isOpen, onClose }) => {
     }, [isOpen, totalItems]);
 
     return (
-        <div className={`fixed inset-y-0 left-0 z-[9999] w-full bg-gray-200/90 ${isOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300`}>
+        <div className={`fixed inset-y-0 left-0 z-[100] w-full bg-gray-200/90 ${isOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300`}>
             <div ref={sidebarRef} className="min-w-72 max-w-96 h-screen p-6 flex flex-col gap-6 bg-gray-100 shadow-xl">
                 
                 <div className="relative z-20 flex flex-col gap-8 h-full">

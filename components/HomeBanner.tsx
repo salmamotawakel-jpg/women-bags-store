@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import React, { Suspense, useEffect, useState } from "react";
@@ -30,14 +28,14 @@ function BagModel() {
   return <primitive object={scene} scale={1.1} position={[0, -0.4, 0]} />;
 }
 
-// ✅ Loader - مستطيل واحد يدور 360 درجة بلون أحمر
+// ✅ Loader - مع zIndex منخفض
 function Loader() {
   return (
-    <Html center>
+    <Html center style={{ zIndex: 10 }}>  {/* إضافة zIndex منخفض */}
       <div
         className="w-32 h-1 rounded-full"
         style={{
-          backgroundColor: '#ff4444',  // اللون الأحمر
+          backgroundColor: '#ff4444',
           animation: 'spin360 1s linear infinite',
           transformOrigin: 'center'
         }}
@@ -56,7 +54,7 @@ export default function HomeBanner() {
   
   if (!mounted) {
     return (
-      <div className="w-full h-[500px]   bg-black flex items-center justify-center">
+      <div className="w-full h-[500px] bg-black flex items-center justify-center">
         <div
           className="w-40 h-1.5 rounded-full"
           style={{
@@ -70,11 +68,11 @@ export default function HomeBanner() {
   }
 
   return (
-    <div className="w-full h-[500px] relative bg-black">
+    <div className="w-full h-[500px] relative bg-black" style={{ isolation: 'isolate' }}>
       <Canvas
         dpr={[1, 2]}
         camera={{ position: [0, 0, 5], fov: 45 }}
-        style={{ background: 'black' }}
+        style={{ background: 'black', position: 'relative', zIndex: 1 }}
       >
         <ambientLight intensity={0.8} />
         <directionalLight position={[5, 5, 5]} intensity={1.2} />

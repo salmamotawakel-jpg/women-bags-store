@@ -204,3 +204,17 @@ section,
     transform: rotate(360deg);
   }
 }
+
+
+
+
+@keyframes dot {
+  0%, 100% {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.2);
+  }
+}
