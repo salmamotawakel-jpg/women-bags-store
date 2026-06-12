@@ -1,4 +1,3 @@
-
 // components/NewCollection.tsx
 "use client";
 
@@ -103,7 +102,7 @@ const NewCollection = ({ products }: NewCollectionProps) => {
       className="w-full py-8 md:py-12 bg-white overflow-hidden"
     >
       <div className="container mx-auto px-4">
-        {/* Header مع تأثير الظهور */}
+        {/* Header مع تأثير الظهور وتطبيق Dancing Script */}
         <div
           className={`
             flex items-center justify-between mb-8
@@ -115,7 +114,17 @@ const NewCollection = ({ products }: NewCollectionProps) => {
           `}
         >
           <div>
-            <h2 className="text-2xl md:text-3xl font-light text-gray-800">New Collection</h2>
+            <h2 
+              className="text-2xl md:text-3xl font-bold text-gray-800"
+              style={{
+                fontSize: '1.4rem',
+                fontFamily: "'Dancing Script', 'cursive'",
+                fontWeight: '500',
+                letterSpacing: '0.01em'
+              }}
+            >
+              New Collection
+            </h2>
             <div className="w-16 h-0.5 bg-pink-800 mt-2" />
           </div>
           

@@ -1,5 +1,7 @@
 
 
+
+
 "use client"
 import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
@@ -21,7 +23,7 @@ const HomeCategories = ({ categories }: { categories: Category[] }) => {
         }
       },
       {
-        threshold: 0.01, // يظهر عندما يكون 20% من القسم مرئيًا
+        threshold: 0.01,
       }
     );
 
@@ -48,10 +50,20 @@ const HomeCategories = ({ categories }: { categories: Category[] }) => {
         }
       `}
     >
-      {/* العنوان */}
+      {/* العنوان مع Dancing Script */}
       <div className="flex items-center justify-between mb-8">
         <Title className="text-2xl md:text-3xl font-bold text-shop_dark_blue dark:text-shop_white">
-          Popular categories
+          <span
+            style={{
+              fontSize: '2rem',
+              fontFamily: "'Dancing Script', 'cursive'",
+              fontWeight: '600',
+              letterSpacing: '0.02em',
+              display: 'inline-block'
+            }}
+          >
+            Popular categories
+          </span>
         </Title>
         <div
           className="
@@ -100,7 +112,6 @@ const HomeCategories = ({ categories }: { categories: Category[] }) => {
               w-20 h-20 md:w-24 md:h-24
               mb-3
             ">
-              {/* الخلفية الدائرية */}
               <div className="
                 absolute inset-0
                 rounded-full
@@ -115,7 +126,6 @@ const HomeCategories = ({ categories }: { categories: Category[] }) => {
                 transition-all duration-300
               " />
               
-              {/* الصورة الدائرية */}
               {category?.image && (
                 <div className="
                   absolute inset-0

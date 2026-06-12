@@ -1,5 +1,8 @@
 
 
+
+
+
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
@@ -75,13 +78,21 @@ const ProductGrid = () => {
       `}
     >
       <Container>
-        {/* العنوان */}
+        {/* العنوان مع Dancing Script */}
         <div className="mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-shop_dark_blue dark:text-shop_white">
-           Featured products
+          <h2 
+            className="text-2xl md:text-3xl font-bold text-shop_dark_blue dark:text-shop_white"
+            style={{
+              fontSize: '1.4rem',
+              fontFamily: "'Dancing Script', 'cursive'",
+              fontWeight: '500',
+              letterSpacing: '0.01em'
+            }}
+          >
+            Featured products
           </h2>
           <p className="text-sm text-shop_light_blue dark:text-shop_light_orange mt-1">
-           14 of our top picks
+            14 of our top picks
           </p>
         </div>
 
