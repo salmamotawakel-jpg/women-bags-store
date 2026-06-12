@@ -85,7 +85,7 @@ export default function HomeBanner() {
         <OrbitControls 
           enableZoom={false} 
           autoRotate 
-          autoRotateSpeed={2}
+          autoRotateSpeed={10}
           enablePan={false}
         />
       </Canvas>
