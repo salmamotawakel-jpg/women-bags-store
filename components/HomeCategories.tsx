@@ -55,10 +55,10 @@ const HomeCategories = ({ categories }: { categories: Category[] }) => {
         <Title className="text-2xl md:text-3xl font-bold text-shop_dark_blue dark:text-shop_white">
           <span
             style={{
-              fontSize: '2rem',
+              fontSize: '1.4rem',
               fontFamily: "'Dancing Script', 'cursive'",
-              fontWeight: '600',
-              letterSpacing: '0.02em',
+              fontWeight: '500',
+              letterSpacing: '0.01em',
               display: 'inline-block'
             }}
           >
